@@ -65,6 +65,18 @@ body {
     width: 25%;
 }
 
+.off {
+    background-color: darkgray !important;
+}
+
+.off::after {
+    content: "IS OFF"
+}
+
+.on::after {
+    content: "IS ON"
+}
+
 /* plant */ 
 
 #plant {
