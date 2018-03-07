@@ -10,7 +10,6 @@
     <script src="lib/Rx.min.js"></script>
     <script src="Plant.js"></script>
     <script src="UI.js"></script>
-    <script src="weatherAPI.js"></script>
     <script src="index.js"></script>
 </head>
 
@@ -20,7 +19,7 @@
             <div>
                 <span class="headerLabel">In which city does your plant lives ?</span>
                 <input id="location" type="text" class="validate">
-                <img id="weatherIcon" src="" alt="sunny" />
+                <img id="weatherIcon" src="" alt="" />
             </div>
         </div>
     </nav>
@@ -44,5 +43,6 @@
         <button class="waves-effect waves-light btn brown darken-3 food">feed</button>
         <button class="waves-effect waves-light btn amber light off">UV light <span>is OFF</span></button>
     </div>
-</body>
+    <script src="weatherAPI.js"></script>
+</body>		
 </html>
