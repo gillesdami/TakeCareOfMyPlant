@@ -31,6 +31,7 @@ class Plant {
             this.water=water; //max water= 100
         }
     }
+    getWater(){return this.water}
 
     setSun(sun){
         if(sun>100){
@@ -50,8 +51,8 @@ class Plant {
         if(nutrients>100){
             this.nutrients=100;
             this.isDead=true;
-        }else if(nutiments<0){
-            this.nutiment=0;
+        }else if(nutrients<0){
+            this.nutrients=0;
             this.isDead=true;
         }else{
             this.nutrients=nutrients; //max nutients= 100
