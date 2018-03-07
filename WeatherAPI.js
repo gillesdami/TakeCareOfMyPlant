@@ -6,8 +6,8 @@
 		response.json().then(function(data){
 			jsonReturn = data.weather[1];
 			console.log(jsonReturn.main);
+			document.querySelector("#weatherIcon").innerHTML = jsonReturn.main ;
 		});
 	});
-	//document.querySelector("#weatherIcon").innerHTML = "Hello World!";
 
 //}

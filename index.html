@@ -5,13 +5,12 @@
         <script src="lib/Rx.min.js"></script>
         <script src="Plant.js"></script>
         <script src="UI.js"></script>
-        <script src="weatherAPI.js"></script>
         <script src="index.js"></script>        
     </head>
     <body onload="init()">
         <div id=location>
             <input type="text"/>
-            <img id="weatherIcon" src="" alt="sunny"/>
+            <img id="weatherIcon" src="" alt=""/>
         </div>
         <div>
             <img id="plant" src="" alt="happy plant"/>
@@ -22,5 +21,7 @@
         <div id="actionBar">
             <!-- TODO -->
         </div>
+		
+        <script src="weatherAPI.js"></script>
     </body>
 </html>
