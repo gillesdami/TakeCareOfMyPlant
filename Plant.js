@@ -31,6 +31,7 @@ class Plant {
             this.water=water; //max water= 100
         }
     }
+    getWater(){return this.water}
 
     setSun(sun){
         if(sun>100){

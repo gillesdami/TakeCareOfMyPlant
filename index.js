@@ -12,6 +12,8 @@ function init() {
     //we provide this api key to enjoy the game on github.io please dont reuse it :)
     const weatherAPI = new WeatherAPI("47b0057c2c422721740ab607e8adb5d1");
 
+    const display = new ShowPlant(plant);
+
     //call plant
     const timeinterval = Rx.Observable.interval(1000)
         .subscribe(plant.nextStep.bind(plant));
@@ -31,6 +33,13 @@ function init() {
                 }
                 weatherAPI.getWeather();
             });
+
+    
+    
+    
+    show.setImage();
+    show.setHealthBars();
+    show.setMeteo()
     
     weatherAPI.observable.subscribe(weather => console.log("the wheather is "+ weather));
     console.log(weatherAPI, plant);
