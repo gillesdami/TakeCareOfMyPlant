@@ -14,7 +14,35 @@ class ShowPlant {
 
     setImage(){
 
-        this.imagePlant.src="images/plant.svg";
+        let stat= this.plant.deathOrigin();
+        console.log(stat);
+        console.log(FLOOD);
+        let src='';
+        switch(stat){
+            case NOTDEAD: src="images/plant.svg";
+                break;
+
+            case FIRE: src="images/plantfire.svg";
+                break;
+            case NOSUN: src="images/plantsanssoleil.svg";
+                break;
+
+            case FLOOD: src="images/planteau.svg";
+                break;
+             case NOWATER: src="images/plantsecheresse.svg";
+                break;
+            case FAT: src="images/plantgros.svg";
+                break;
+            case HUNGER: src="images/plantnormal.svg";
+                break;
+            case OTHER: src="images/plantnormal.svg";
+                break;
+
+            default: src="images/plant.svg";
+
+
+        }
+        this.imagePlant.src=src;
 
     
     }

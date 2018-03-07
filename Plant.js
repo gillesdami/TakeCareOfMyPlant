@@ -7,6 +7,10 @@ const FAT=5;
 const HUNGER=6;
 const OTHER=7;
 
+const SUNNY=8;
+const CLOUDY=9;
+const RAIN=10;
+
 class Plant {
     
     constructor(water, sun, nutrients, weather,isUVLamp){
