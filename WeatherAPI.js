@@ -1,13 +1,18 @@
 
-//class WeatherAPI {
-	var jsonReturn;
-	var myRequest = new Request("http://api.openweathermap.org/data/2.5/weather?q=London&appid=47b0057c2c422721740ab607e8adb5d1");
-	fetch(myRequest).then(function(response) {
-		response.json().then(function(data){
-			jsonReturn = data.weather[0];
-			console.log(jsonReturn.main);
-			document.querySelector("#weatherIcon").innerHTML = jsonReturn.main ;
-		});
-	});
+class WeatherAPI {
+	
+	constructor (appId){
+		this._appId = appId; 
+	}
+	
+	async getWeather(){
+		const myRequest = new Request("http://api.openweathermap.org/data/2.5/weather?q="+this._city+"&appid="+this._appId);
+		const response = await fetch(myRequest);
+		return Rx.Observable.fromPromise(response.json());
+	}
+	
+	getCity(name){
+		this._city = name;
+	}
 
-//}
+}
