@@ -1,5 +1,14 @@
+const NOTDEAD=0;
+const FLOOD=1;
+const NOWATER=2;
+const FIRE=3;
+const NOSUN=4;
+const FAT=5;
+const HUNGER=6;
+const OTHER=7;
 
 class Plant {
+    
     constructor(water, sun, nutrients, weather,isUVLamp){
         this.isDead=false;
         this.setWater(water);
@@ -112,21 +121,21 @@ class Plant {
 
     deathOrigin(){
         if(!this.isDead){
-            return "plant not dead"
+            return NOTDEAD
         }else if(this.water==100){
-            return "flood"
+            return FLOOD
         }else if(this.sun==100){
-            return "fire"
+            return FIRE
         }else if(this.nutiment==100){
-            return "fat"
+            return FAT
         }else if(this.water==0){
-            return "no water"
+            return NOWATER
         }else if(this.sun==0){
-            return "no light"
+            return NOSUN
         }else if(this.nutiment==0){
-            return "no nutriment"
+            return HUNGER
         }else{
-            return "bad tratement"
+            return OTHER
         }
     }
 
