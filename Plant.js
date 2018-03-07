@@ -21,6 +21,7 @@ class Plant {
         this.isUVLamp=isUVLamp;
         this.weather=weather; //string avec comme choix: sunny, cloudy, rain
 
+        this.isDeadObservable = Rx.Observable.create(observer => this._isDeadObserver = observer);
         //this.isDead=false;
     }
 
@@ -71,6 +72,7 @@ class Plant {
             return 1; //middel shape
         }else{
             this.isDead=true;
+            this._isDeadObserver.next(true);
             return 0; //bad shape
         }
     }
@@ -95,17 +97,17 @@ class Plant {
     nextStep(){
         if (!this.isDead){
             switch(this.weather){
-                case "sunny": 
+                case SUNNY: 
                     this.setWater(this.water-5);
                     this.setNutrients(this.nutrients-2);
                     this.setSun(this.sun+5);
                     break;
-                case "cloudy":
+                case CLOUDY:
                 this.setWater(this.water-2);
                     this.setNutrients(this.nutrients-2);
                     this.setSun(this.sun-2);
                     break;
-                case "rain": 
+                case RAIN: 
                     this.setWater(this.water+2);
                     this.setNutrients(this.nutrients-2);
                     this.setSun(this.sun-2);

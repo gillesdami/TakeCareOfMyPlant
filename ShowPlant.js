@@ -10,6 +10,7 @@ class ShowPlant {
         this.weatherIcon=document.querySelector('#weatherIcon');
         //this.iconmeteo=document.querySelector()
         //console.log(this.imagePlant);
+
     }
 
     setImage(){
