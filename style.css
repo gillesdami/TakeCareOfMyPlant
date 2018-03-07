@@ -1,0 +1,75 @@
+/*** containers ***/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header/location */
+.nav-wrapper > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerLabel {
+    max-width: 50%;
+    overflow-wrap: break-word;
+    line-height: 20px;
+}
+
+#location {
+    width: 30%;
+}
+
+#weatherIcon {
+    max-height: 50px;
+}
+
+/* healthBar */
+#healthBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#healthBar > div {
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+#healthBar > div > div {
+    height: 26px;
+}
+
+#healthBar > div > span {
+    top: -28px;
+    position: relative;
+}
+
+/* actionBar */
+#actionBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#actionBar > button {
+    width: 25%;
+}
+
+/* plant */ 
+
+#plant {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 70%;
+}
